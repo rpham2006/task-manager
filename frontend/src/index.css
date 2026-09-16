@@ -1,0 +1,27 @@
+:root {
+  /* Tells the browser we handle both themes, so form controls and
+     scrollbars match too. Light values are the default below. */
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #666666;
+  --line: #dddddd;
+  --error: #b00020;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1a1a1a;
+    --text: #f2f2f2;
+    --muted: #aaaaaa;
+    --line: #3a3a3a;
+    --error: #ff6b6b;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
