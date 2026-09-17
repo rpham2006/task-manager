@@ -19,3 +19,93 @@ li {
 .error {
   color: var(--error);
 }
+
+.task-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-form input {
+  flex: 1;
+  padding: 0.5rem 0.6rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.task-form input:focus {
+  outline: 2px solid #4a9eff;
+  outline-offset: -1px;
+}
+
+.task-form button {
+  padding: 0.5rem 1rem;
+  font: inherit;
+  color: var(--bg);
+  background: var(--text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-form button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.empty {
+  color: var(--muted);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.task label {
+  flex: 1;
+  cursor: pointer;
+}
+
+.task label.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.task input[type='checkbox'] {
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  accent-color: #4a9eff;
+}
+
+.delete {
+  padding: 0 0.4rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  color: var(--muted);
+  background: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  /* Hidden until hover/focus so the list stays calm. */
+  opacity: 0;
+}
+
+.task:hover .delete,
+.delete:focus-visible {
+  opacity: 1;
+}
+
+.delete:hover {
+  color: var(--error);
+}
+
+.count {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
